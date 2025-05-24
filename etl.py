@@ -5,6 +5,7 @@ def load_data(path):
 
 def clean_data(df):
     df_clean = df.dropna()
+    df_clean = df_clean[df_clean['quantity'] > 0]
     return df_clean
 
 def feature_engineering(df):
